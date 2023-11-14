@@ -1508,7 +1508,7 @@ GameObject:
   - component: {fileID: 6678854613001181656}
   m_Layer: 0
   m_Name: Gino_Trenino (2)
-  m_TagString: Untagged
+  m_TagString: Prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

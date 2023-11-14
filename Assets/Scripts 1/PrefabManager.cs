@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class PrefabManager : MonoBehaviour
 {
-    private Rigidbody rb;
-    private bool isOverPrefab;
-
     private PlayerManager player;
 
     // Start is called before the first frame update
@@ -16,15 +13,15 @@ public class PrefabManager : MonoBehaviour
     {
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*
+    private void OnCollisionEnter(Collision collision)
     {
-        
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            player = other.GetComponent<PlayerManager>();
-            player.levelNois -= 10;
+            print("Collisione Con Player");
+            player.levelNois += 0.10f;
             print("-10");
             print(player.levelNois);
         }
-    }
+    }*/
 }

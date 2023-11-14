@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3105102431549387146}
   m_Layer: 0
   m_Name: Gino_Pallino
-  m_TagString: Untagged
+  m_TagString: Prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

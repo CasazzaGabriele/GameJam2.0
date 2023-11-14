@@ -5,14 +5,14 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] prefToSpawn;
-
-    private int nPrefab = 4;
+    [SerializeField] private PlayerManager player;
 
     private Rigidbody rb;
 
     // Start is called before the first frame update
     private void Start()
     {
+        player = GetComponent<PlayerManager>();
         rb = GetComponent<Rigidbody>();
         SpawnObject();
     }

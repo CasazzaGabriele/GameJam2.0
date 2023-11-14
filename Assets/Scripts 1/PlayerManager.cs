@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerManager : MonoBehaviour
     private Rigidbody rb;
 
     private Vector2 input;
+    private Vector2 turnInp;
     private Vector3 direction;
 
     [HideInInspector] public float speed;
@@ -28,7 +30,7 @@ public class PlayerManager : MonoBehaviour
     //       Variabili per lo score System.
     //###############################################
 
-    [HideInInspector] public int levelNois;
+    [HideInInspector] public float levelNois;
 
     [HideInInspector] public float timer = 60;
     [HideInInspector] public float seconds;
@@ -46,13 +48,14 @@ public class PlayerManager : MonoBehaviour
     {
         //----------------------- RESET DELLE VARIABILI ----------------------------------
 
-        levelNois = 100;
+        levelNois = 0f;
         seconds = 0f;
-        speed = 70f;
+        speed = 40f;
         isWinner = false;
         gameOver = false;
 
         rb = GetComponent<Rigidbody>();
+
         rb.transform.position = new(rb.transform.position.x, 0, rb.transform.position.z);
     }
 
@@ -74,11 +77,11 @@ public class PlayerManager : MonoBehaviour
         {
             gameOver = true;
         }
-        else if (levelNois == 0)
+        else if (levelNois == 100f)
         {
             gameOver = true;
         }
-        else if (levelNois == 0 && timer == 0f)
+        else if (levelNois == 100f && timer == 0f)
         {
             gameOver = true;
         }
@@ -89,7 +92,6 @@ public class PlayerManager : MonoBehaviour
 
         #region Timer
 
-        //---------------------------------timer---------------------------------------
         timer -= Time.deltaTime;
         if (timer < 0)
         {
@@ -109,12 +111,9 @@ public class PlayerManager : MonoBehaviour
 
     //###########################################################################
 
-    #region PlayerINputs
+    #region PlayerInputs
 
-    //###########################################################################
-    //                            Player Inputs
-    //###########################################################################
-
+    // basic move function
     public void MovePlayer(InputAction.CallbackContext context)
     {
         input = context.ReadValue<Vector2>();
@@ -122,6 +121,7 @@ public class PlayerManager : MonoBehaviour
         print(direction);
     }
 
+    // Jump function
     public void Jump()
     {
         if (isGraunded)
@@ -131,25 +131,36 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void SetSpeed(float x)
+    // Turnright function
+    public void TurnRight(InputAction.CallbackContext context)
     {
-        speed = x;
+        turnInp = context.ReadValue<Vector2>();
     }
 
-    #endregion PlayerINputs
+    #endregion PlayerInputs
 
     //###########################################################################
 
     #region CustomFunction
 
-    //###########################################################################
-    //                                     score Function
-    //###########################################################################
+    // per gestire le interazioni con i prefab ed il level Nois
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Prefab"))
+        {
+            print("Collisione Con Player");
+            levelNois += 10f;
+            //print(levelNois);
+        }
+    }
+
+    // Calcolo dello score
     public void Score()
     {
         score = timer * levelNois;
     }
 
+    // setta la variabile is winner a true ad una detterminata condizione
     public void SetisWinner(bool myBool)
     {
         isWinner = myBool;
