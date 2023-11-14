@@ -155,7 +155,7 @@ public class PlayerManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Prefab"))
         {
             print("Collisione Con Player");
-            levelNois += 2.5f;
+            levelNois += 10f;
             //print(levelNois);
         }
     }
