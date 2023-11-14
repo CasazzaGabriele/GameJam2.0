@@ -54,7 +54,7 @@ public class PlayerManager : MonoBehaviour
 
         levelNois = 0f;
         seconds = 0f;
-        speed = 40f;
+        speed = 60f;
         isWinner = false;
         gameOver = false;
 
@@ -153,7 +153,7 @@ public class PlayerManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Prefab"))
         {
             print("Collisione Con Player");
-            levelNois += 10f;
+            levelNois += 2.5f;
             //print(levelNois);
         }
     }
