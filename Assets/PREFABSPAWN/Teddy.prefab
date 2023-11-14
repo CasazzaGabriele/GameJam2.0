@@ -13,12 +13,7 @@ GameObject:
   - component: {fileID: 6696834530610025285}
   - component: {fileID: 6379399465805749476}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   - component: {fileID: 748236450265255829}
-=======
-  - component: {fileID: 539571221198363341}
-  - component: {fileID: 3293560013597781246}
->>>>>>> Stashed changes
 =======
   - component: {fileID: 539571221198363341}
   - component: {fileID: 3293560013597781246}
@@ -108,11 +103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 --- !u!54 &748236450265255829
 =======
-=======
->>>>>>> Stashed changes
 --- !u!65 &539571221198363341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -127,9 +119,6 @@ BoxCollider:
   m_Size: {x: 0.021776095, y: 0.028133433, z: 0.016398605}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3293560013597781246
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -139,11 +128,7 @@ Rigidbody:
   m_GameObject: {fileID: 5183383643447046800}
   serializedVersion: 2
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   m_Mass: 1
-=======
-  m_Mass: 0.3
->>>>>>> Stashed changes
 =======
   m_Mass: 0.3
 >>>>>>> Stashed changes
