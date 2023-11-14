@@ -48,7 +48,7 @@ public class PlayerManager : MonoBehaviour
 
         levelNois = 100;
         seconds = 0f;
-        speed = 100f;
+        speed = 60f;
         isWinner = false;
         gameOver = false;
 
