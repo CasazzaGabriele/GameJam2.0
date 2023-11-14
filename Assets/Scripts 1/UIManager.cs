@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     // variabili per la UI
 
     [SerializeField] private TMP_Text timer;
+    [SerializeField] private TMP_Text score;
     [SerializeField] public Slider slide;
 
     //-------------------------------------------
@@ -25,6 +26,7 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
         timer.SetText($"{(int)player.timer}");
+        score.SetText($"{(int)player.score}");
         slide.value = player.levelNois;
     }
 }

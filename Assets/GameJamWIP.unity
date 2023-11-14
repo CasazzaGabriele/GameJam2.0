@@ -3445,7 +3445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 156
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -4742,7 +4742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.9644, y: 178.8}
+  m_AnchoredPosition: {x: -12.964355, y: 178.79999}
   m_SizeDelta: {x: -25.9288, y: -367.9448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &776767119
@@ -9418,6 +9418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 1818815871}
+  score: {fileID: 629332244}
   slide: {fileID: 1425494984}
   player: {fileID: 2041648779}
 --- !u!4 &1493953638
@@ -10941,7 +10942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2958162, g: 0, b: 0.7264151, a: 1}
+  m_Color: {r: 1, g: 0.58360845, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
