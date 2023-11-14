@@ -101,9 +101,9 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Two Modifiers",
+                    "name": "2D Vector",
                     "id": "84f6c601-3a8c-4b46-adbe-e9b1b582edb9",
-                    "path": "TwoModifiers",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

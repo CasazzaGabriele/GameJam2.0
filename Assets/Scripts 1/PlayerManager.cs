@@ -14,9 +14,13 @@ public class PlayerManager : MonoBehaviour
 
     private Vector2 input;
     private Vector2 turnInp;
+
+    private Vector3 turn;
     private Vector3 direction;
 
-    [HideInInspector] public float speed;
+    private float rotationSpeed = 180f;
+
+    private float speed;
 
     private bool isGraunded;
 
@@ -107,6 +111,12 @@ public class PlayerManager : MonoBehaviour
 
         //rb.transform.Translate(direction * -1 * speed * Time.deltaTime, Space.Self);
         rb.velocity = (direction * -1 * speed * Time.deltaTime);
+        if (direction != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(direction * -1, Vector3.up);
+
+            rb.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        }
     }
 
     //###########################################################################
@@ -129,12 +139,6 @@ public class PlayerManager : MonoBehaviour
             rb.AddForce((Vector3.up * 3f) / 2f, ForceMode.Impulse);
             rb.velocity = -direction;
         }
-    }
-
-    // Turnright function
-    public void TurnRight(InputAction.CallbackContext context)
-    {
-        turnInp = context.ReadValue<Vector2>();
     }
 
     #endregion PlayerInputs
