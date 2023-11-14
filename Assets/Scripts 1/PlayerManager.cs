@@ -54,11 +54,7 @@ public class PlayerManager : MonoBehaviour
 
         levelNois = 0f;
         seconds = 0f;
-<<<<<<< Updated upstream
         speed = 40f;
-=======
-        speed = 60f;
->>>>>>> Stashed changes
         isWinner = false;
         gameOver = false;
 
